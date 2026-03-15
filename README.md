@@ -15,6 +15,7 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - Display: working (phrog greeter shows lock screen via simpledrm)
 - GPU: simpledrm only (no hardware acceleration)
 - Touch: **working** (post-boot enable via `enable-touch.sh`, requires modified DTB)
+- Power button: **working** (sleep/wake with touch surviving)
 - UFS (internal storage): NOT working (microSD rootfs required)
 - WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
 - Bluetooth: untested
