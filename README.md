@@ -10,21 +10,34 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - **Distro**: Mobian (Debian Trixie)
 - **Base image**: Mobian SM6350 weekly
 
-## Status
-- Boot: working (mainline kernel boots from microSD rootfs)
-- Display: simpledrm only (bootloader-initialized framebuffer, no GPU driver)
-- GPU: NOT working (missing a619_gmu.bin, a615_zap.mbn firmware)
-- Touch: Samsung S6SY761 — driver loads, generates events, but axis properties not applied
-- Bluetooth: untested (no UI access)
+## Status (Golden tag)
+- Boot: working
+- Display: working (phrog greeter shows lock screen via simpledrm)
+- GPU: simpledrm only (no hardware acceleration)
+- Touch: NOT working (Samsung S6SY761 driver not loaded in this config)
 - UFS (internal storage): NOT working (microSD rootfs required)
-- WiFi/Modem: NOT working (blocked by UFS — firmware on internal storage)
+- WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
+- Bluetooth: untested
+- SSH: working (`ssh -J terrace@192.168.1.122 mobian@10.66.0.1`)
 
-## Critical Issue: Display
-The display uses `simpledrm` (bootloader-initialized framebuffer). Once any
-compositor (phoc/wlroots) does a DRM modeset, the bootloader framebuffer is
-destroyed and the display goes black permanently until reboot. The OLED panel
-cannot be re-initialized without a proper MSM DRM/DSI driver, which requires
-GPU firmware that we cannot extract (UFS not working).
+## Display Notes
+The display uses `simpledrm` (bootloader-initialized framebuffer). The phrog
+greeter (phoc compositor) renders to this framebuffer successfully in its
+stock configuration. Key constraints:
+- Do NOT set `WLR_RENDERER_ALLOW_SOFTWARE=1` — this causes phoc to use
+  llvmpipe which does a modeset that destroys the bootloader framebuffer
+- Do NOT load the `msm` DRM kernel module — conflicts with simpledrm
+- Do NOT install GPU firmware (a619_gmu.bin) — triggers MSM DRM probe
+- The phrog greeter must run in its stock configuration
+- Screen will blank after idle timeout (60s default); power button wakes it
+
+## GPU Firmware (for future work)
+The Adreno 619 GPU needs firmware not included in Debian's `firmware-qcom-soc`:
+- `a619_gmu.bin` — GMU firmware (available from FairBlobs/FP4-firmware)
+- `a615_zap.mdt` + `.b00-.b02` — ZAP shader (available from FairBlobs/FP4-firmware)
+- `a630_sqe.fw` — already in firmware-qcom-soc
+- The `msm` DRM module (`CONFIG_DRM_MSM=m`) exists but needs deps: `drm_exec`, `gpu-sched`, `drm_display_helper`
+- Enabling GPU requires the MSM DRM driver to take over from simpledrm
 
 ## Partition Layout
 - `boot_a`: Mobian boot.img (mainline kernel + initramfs + DTB)
@@ -41,12 +54,12 @@ GPU firmware that we cannot extract (UFS not working).
 - `fastboot boot` NOT supported — must flash to boot_a
 
 ## Boot Images
-- `boot-mobian.img` — Original Mobian weekly SM6350 boot image (known good)
+- `boot-mobian.img` — Original Mobian weekly SM6350 boot image (Golden)
 - `boot-mobian-touch.img` — Modified DTB with touchscreen-size-x/y properties
 
 ## Infrastructure
 - Phone stays plugged into Fedora laptop (192.168.1.122)
-- Fastboot/adb: container `xperia` on Fedora laptop
+- Fastboot/adb: container `xperia` on Fedora laptop (`sudo podman exec xperia fastboot ...`)
 - SSH to phone: `ssh -J terrace@192.168.1.122 mobian@10.66.0.1`
 - SD card reader: Fedora laptop, mounts at /dev/sda
 
