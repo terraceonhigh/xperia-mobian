@@ -30,6 +30,8 @@ This documents the known-good state where the lock screen displays.
 | `/etc/phrog/phoc.ini` | Phrog greeter compositor config: `[output:Unknown-1]` scale=4 (greeter session) |
 | `/usr/local/bin/enable-touch.sh` | On-device touch enable script (GPIO toggle + insmod + reset + rebind) |
 | `/etc/systemd/system/enable-touch.service` | Systemd service to run enable-touch.sh after greetd |
+| `/usr/local/bin/rebind-touch.sh` | Reset + rebind touch after greeter→session transition |
+| `/home/mobian/.config/systemd/user/rebind-touch.service` | User service to run rebind-touch.sh at login |
 
 ## Packages Installed
 | Package | Version | Purpose |
@@ -117,10 +119,10 @@ properly. The reliable sequence is: power on → insmod → unbind → reset →
 
 **Boot image:** `boot-mobian-noavdd2.img` flashed to `boot_a`
 
-**Known issue:** Touch I2C communication breaks during the greeter→user session
-transition (greetd restarts phoc). The touch IC needs a reset+rebind after
-unlocking. Currently requires manual SSH intervention; automating this via a
-session-start hook or udev rule is TODO.
+**Session transition:** Touch I2C breaks when greetd restarts phoc for the user
+session. Fixed by a systemd user service (`rebind-touch.service`) that runs
+`/usr/local/bin/rebind-touch.sh` at login — unbinds, resets GPIO 21, rebinds.
+Touch survives power button sleep/wake cycles.
 
 **What does NOT work (tested and failed):**
 - Loading s6sy761.ko with stock DTB — regulator toggle kills simpledrm display
