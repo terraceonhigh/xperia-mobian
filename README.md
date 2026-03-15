@@ -14,7 +14,7 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - Boot: working
 - Display: working (phrog greeter shows lock screen via simpledrm)
 - GPU: simpledrm only (no hardware acceleration)
-- Touch: driver probes successfully but **kills simpledrm display** (see ROOTFS_MODS.md)
+- Touch: **working** (post-boot enable via `enable-touch.sh`, requires modified DTB)
 - UFS (internal storage): NOT working (microSD rootfs required)
 - WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
 - Bluetooth: untested
@@ -56,7 +56,7 @@ The Adreno 619 GPU needs firmware not included in Debian's `firmware-qcom-soc`:
 
 ## Boot Images
 - `boot-mobian.img` — Original Mobian weekly SM6350 boot image (Golden)
-- `boot-mobian-touch.img` — Modified DTB with touchscreen-size-x/y properties
+- `boot-mobian-noavdd2.img` — Modified DTB: removed `avdd-supply` + `touch-en-regulator` (touch-safe)
 
 ## Infrastructure
 - Phone stays plugged into Fedora laptop (192.168.1.122)
