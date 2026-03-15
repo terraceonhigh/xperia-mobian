@@ -14,7 +14,7 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - Boot: working
 - Display: working (phrog greeter shows lock screen via simpledrm)
 - GPU: simpledrm only (no hardware acceleration)
-- Touch: NOT working (Samsung S6SY761 driver not loaded in this config)
+- Touch: driver works manually (`insmod s6sy761.ko`), not yet auto-loaded or integrated with phosh
 - UFS (internal storage): NOT working (microSD rootfs required)
 - WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
 - Bluetooth: untested
@@ -29,7 +29,8 @@ stock configuration. Key constraints:
 - Do NOT load the `msm` DRM kernel module — conflicts with simpledrm
 - Do NOT install GPU firmware (a619_gmu.bin) — triggers MSM DRM probe
 - The phrog greeter must run in its stock configuration
-- Screen will blank after idle timeout (60s default); power button wakes it
+- Screen will blank after idle timeout unless _greetd gsettings are set (see ROOTFS_MODS.md)
+- simpledrm DPMS off is irrecoverable — must prevent blanking, not try to wake
 
 ## GPU Firmware (for future work)
 The Adreno 619 GPU needs firmware not included in Debian's `firmware-qcom-soc`:

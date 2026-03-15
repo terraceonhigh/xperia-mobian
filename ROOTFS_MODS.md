@@ -38,6 +38,39 @@ This documents the known-good state where the lock screen displays.
 | mobian password | `1234` |
 | SSH key | Mac pubkey in `/home/mobian/.ssh/authorized_keys` |
 
+## Screen Blanking Fix (gsettings for _greetd)
+
+The phosh greeter (running as `_greetd`) blanks the screen after a few seconds
+of idle. With simpledrm, DPMS off is **irrecoverable** — the screen stays dark
+until reboot. Fix: set gsettings for the `_greetd` user via their dbus session.
+
+These settings are persisted in `/var/lib/greetd/.config/dconf/user` on the SD card.
+
+**To apply (run after boot, via SSH):**
+```bash
+DBUS_ADDR=$(sudo grep -z DBUS_SESSION_BUS_ADDRESS \
+  /proc/$(pgrep -u _greetd -f phoc | head -1)/environ 2>/dev/null \
+  | tr '\0' '\n' | grep DBUS_SESSION | cut -d= -f2-)
+sudo -u _greetd DBUS_SESSION_BUS_ADDRESS="$DBUS_ADDR" \
+  gsettings set org.gnome.desktop.session idle-delay 0
+sudo -u _greetd DBUS_SESSION_BUS_ADDRESS="$DBUS_ADDR" \
+  gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+sudo -u _greetd DBUS_SESSION_BUS_ADDRESS="$DBUS_ADDR" \
+  gsettings set org.gnome.desktop.screensaver idle-activation-enabled false
+sudo -u _greetd DBUS_SESSION_BUS_ADDRESS="$DBUS_ADDR" \
+  gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-battery-type nothing
+```
+
+Once applied, settings persist across reboots (stored in _greetd's dconf database).
+Power button still works to sleep/wake the screen.
+
+**What does NOT work (tested and failed):**
+- Pre-building dconf database offline and placing on SD card — causes bootloop
+- Wrapper scripts around phrog-greetd-session — breaks greetd session tracking
+- Setting `WLR_RENDERER_ALLOW_SOFTWARE=1` — breaks pixman renderer path
+- gsettings for `mobian` user only — _greetd runs the greeter separately
+- systemd services `Before=greetd.service` — break Plymouth→phosh display transition
+
 ## What Is NOT Modified (critical for display)
 - `/usr/libexec/phrog-greetd-session` — stock, no WLR env vars
 - `/etc/greetd/phrog.toml` — stock, runs phrog-greetd-session as _greetd
