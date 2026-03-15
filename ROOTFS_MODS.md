@@ -26,6 +26,7 @@ This documents the known-good state where the lock screen displays.
 | `/usr/local/bin/bind-shell.sh` | Python bind shell script (used by bind-shell.service) |
 | `/usr/lib/modules/6.12-sm6350/kernel/drivers/input/touchscreen/s6sy761.ko` | Cross-compiled Samsung S6SY761 touch driver (present but not auto-loaded) |
 | `/etc/sudoers.d/mobian-nopasswd` | `mobian ALL=(ALL) NOPASSWD: ALL` |
+| `/etc/phosh/phoc.ini` | Phoc compositor config: `[output:Unknown-1]` scale=4 (simpledrm output) |
 
 ## Packages Installed
 | Package | Version | Purpose |
@@ -79,9 +80,12 @@ Power button still works to sleep/wake the screen.
    from the touchscreen node AND removed the `touch-en-regulator` node entirely.
    This prevents the kernel regulator framework from claiming TLMM GPIO 10.
 
-2. **Post-boot enable** (`enable-touch.sh`): After boot, manually set GPIO 10
-   high via the chardev interface (powers the touch IC), then `insmod s6sy761.ko`.
-   The display survives because GPIO 10 is toggled outside the regulator framework.
+2. **Post-boot enable** (`enable-touch.sh`): After boot:
+   - Set GPIO 10 high via chardev (powers touch IC AVDD rail)
+   - `insmod s6sy761.ko` (initial probe often has I2C DMA errors)
+   - Unbind driver from device (`echo 0-0048 > .../unbind`)
+   - Reset touch IC: GPIO 21 low for 0.5s, high, then 2s settle
+   - Rebind driver (`echo 0-0048 > .../bind`) — clean probe succeeds
 
 **Why this works:** The stock DTB's `avdd-supply` pointed to a GPIO-controlled
 fixed regulator (`touch_en_vreg`) on TLMM GPIO 10. When s6sy761 probed, the
@@ -89,6 +93,11 @@ regulator framework drove GPIO 10 high, which killed the bootloader-initialized
 AMOLED panel (shared power rail). By removing the regulator from the DT and
 toggling GPIO 10 directly, the same electrical result occurs but without the
 regulator framework's interaction that caused the display to die.
+
+The initial `insmod` probe often partially succeeds (module loads, event device
+created) but subsequent I2C reads fail with DMA errors (-EIO). This is because
+the touch IC needs a hardware reset (GPIO 21) after AVDD power-on to initialize
+properly. The reliable sequence is: power on → insmod → unbind → reset → rebind.
 
 **Hardware details:**
 - Touch I2C: `988000.i2c` (bus 0, addr 0x48)

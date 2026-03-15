@@ -31,6 +31,8 @@ stock configuration. Key constraints:
 - The phrog greeter must run in its stock configuration
 - Screen will blank after idle timeout unless _greetd gsettings are set (see ROOTFS_MODS.md)
 - simpledrm DPMS off is irrecoverable — must prevent blanking, not try to wake
+- simpledrm output is named `Unknown-1` — phoc scale set via `/etc/phosh/phoc.ini`
+- Scale 4 gives usable UI on the 1080x2520 AMOLED (270x630 logical pixels)
 
 ## GPU Firmware (for future work)
 The Adreno 619 GPU needs firmware not included in Debian's `firmware-qcom-soc`:
