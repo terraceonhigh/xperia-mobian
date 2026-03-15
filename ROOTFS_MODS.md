@@ -80,14 +80,29 @@ address 0x48. The probe succeeds (module loads, `/dev/input/event3` created,
 touch events work), but the display goes irrecoverably dark at the moment of
 probe. This happens even with screen blanking disabled.
 
-Likely cause: the I2C probe or the touchscreen controller's initialization
-sequence interferes with the display panel (AMOLED) — they may share the I2C
-bus, a power rail, or a GPIO. The simpledrm framebuffer is bootloader-initialized
-and has no ability to re-initialize the display hardware.
+**Root cause (from DT analysis):**
+The touchscreen's `avdd-supply` is a GPIO-controlled fixed regulator
+(`touch_en_vreg`) on **TLMM GPIO 10**. When s6sy761 probes, it calls
+`regulator_enable()` which drives GPIO 10 high. This kills the
+bootloader-initialized AMOLED panel — GPIO 10 likely controls a shared
+power rail or reset line that the panel depends on in its current state.
 
-**Implication:** Touch cannot work alongside simpledrm. Enabling touch likely
-requires the full MSM DRM driver (which can re-initialize the display) or a
-kernel change to avoid the conflict during s6sy761 probe.
+DT details:
+- Touch I2C: `988000.i2c` (bus 0, addr 0x48)
+- Touch interrupt: TLMM GPIO 22
+- Touch reset pinctrl: GPIO 21
+- `vdd-supply`: PMIC LDO (1.8V)
+- `avdd-supply`: `touch_en_vreg` → TLMM GPIO 10, enable-active-high
+- DSI controller: `dsi@ae94000` — status "disabled" in DT (panel is bootloader-configured)
+
+**Implication:** Touch cannot work alongside simpledrm. Enabling touch requires
+the full MSM DRM driver (which can re-initialize the display after the power
+rail glitch) or a kernel/DT change to prevent the regulator toggle during probe.
+
+**GPU firmware available:** Stock Sony firmware on Bazzite server at
+`~/Lab/xperiaGSI/XQ-BT52_Customized HK_62.2.A.0.533/` contains `a619_gmu.bin`,
+`a615_zap.*`, `a630_sqe.fw` in the vendor partition (inside `super_X-FLASH-ALL-8A63.sin`,
+Sony `.sin` format — needs extraction).
 
 ## What Is NOT Modified (critical for display)
 - `/usr/libexec/phrog-greetd-session` — stock, no WLR env vars
