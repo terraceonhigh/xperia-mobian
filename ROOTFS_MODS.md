@@ -71,6 +71,24 @@ Power button still works to sleep/wake the screen.
 - gsettings for `mobian` user only — _greetd runs the greeter separately
 - systemd services `Before=greetd.service` — break Plymouth→phosh display transition
 
+## Touchscreen (s6sy761) — Known Issue: kills display
+
+**Loading `s6sy761.ko` via `insmod` consistently kills the simpledrm display.**
+
+The touch driver probes the Samsung S6SY761 controller on I2C bus 0 (988000.i2c),
+address 0x48. The probe succeeds (module loads, `/dev/input/event3` created,
+touch events work), but the display goes irrecoverably dark at the moment of
+probe. This happens even with screen blanking disabled.
+
+Likely cause: the I2C probe or the touchscreen controller's initialization
+sequence interferes with the display panel (AMOLED) — they may share the I2C
+bus, a power rail, or a GPIO. The simpledrm framebuffer is bootloader-initialized
+and has no ability to re-initialize the display hardware.
+
+**Implication:** Touch cannot work alongside simpledrm. Enabling touch likely
+requires the full MSM DRM driver (which can re-initialize the display) or a
+kernel change to avoid the conflict during s6sy761 probe.
+
 ## What Is NOT Modified (critical for display)
 - `/usr/libexec/phrog-greetd-session` — stock, no WLR env vars
 - `/etc/greetd/phrog.toml` — stock, runs phrog-greetd-session as _greetd

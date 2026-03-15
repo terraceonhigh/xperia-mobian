@@ -14,7 +14,7 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - Boot: working
 - Display: working (phrog greeter shows lock screen via simpledrm)
 - GPU: simpledrm only (no hardware acceleration)
-- Touch: driver works manually (`insmod s6sy761.ko`), not yet auto-loaded or integrated with phosh
+- Touch: driver probes successfully but **kills simpledrm display** (see ROOTFS_MODS.md)
 - UFS (internal storage): NOT working (microSD rootfs required)
 - WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
 - Bluetooth: untested
