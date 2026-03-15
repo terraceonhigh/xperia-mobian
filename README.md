@@ -14,7 +14,7 @@ Mainline Linux (Debian/Mobian) on the Sony Xperia 10 III.
 - Boot: working
 - Display: working (phrog greeter shows lock screen via simpledrm)
 - GPU: simpledrm only (no hardware acceleration)
-- Touch: **working** (post-boot enable via `enable-touch.sh`, requires modified DTB)
+- Touch: **working** (auto-enabled at boot via systemd service, requires modified DTB)
 - Power button: **working** (sleep/wake with touch surviving)
 - UFS (internal storage): NOT working (microSD rootfs required)
 - WiFi/Modem: NOT working (firmware on internal storage, UFS broken)
@@ -34,6 +34,7 @@ stock configuration. Key constraints:
 - simpledrm DPMS off is irrecoverable — must prevent blanking, not try to wake
 - simpledrm output is named `Unknown-1` — phoc scale set via `/etc/phosh/phoc.ini`
 - Scale 4 gives usable UI on the 1080x2520 AMOLED (270x630 logical pixels)
+- Both greeter (`/etc/phrog/phoc.ini`) and user session (`/etc/phosh/phoc.ini`) need scale config
 
 ## GPU Firmware (for future work)
 The Adreno 619 GPU needs firmware not included in Debian's `firmware-qcom-soc`:

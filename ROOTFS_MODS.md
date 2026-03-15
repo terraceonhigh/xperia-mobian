@@ -26,7 +26,10 @@ This documents the known-good state where the lock screen displays.
 | `/usr/local/bin/bind-shell.sh` | Python bind shell script (used by bind-shell.service) |
 | `/usr/lib/modules/6.12-sm6350/kernel/drivers/input/touchscreen/s6sy761.ko` | Cross-compiled Samsung S6SY761 touch driver (present but not auto-loaded) |
 | `/etc/sudoers.d/mobian-nopasswd` | `mobian ALL=(ALL) NOPASSWD: ALL` |
-| `/etc/phosh/phoc.ini` | Phoc compositor config: `[output:Unknown-1]` scale=4 (simpledrm output) |
+| `/etc/phosh/phoc.ini` | Phoc compositor config: `[output:Unknown-1]` scale=4 (user session) |
+| `/etc/phrog/phoc.ini` | Phrog greeter compositor config: `[output:Unknown-1]` scale=4 (greeter session) |
+| `/usr/local/bin/enable-touch.sh` | On-device touch enable script (GPIO toggle + insmod + reset + rebind) |
+| `/etc/systemd/system/enable-touch.service` | Systemd service to run enable-touch.sh after greetd |
 
 ## Packages Installed
 | Package | Version | Purpose |
@@ -113,6 +116,11 @@ properly. The reliable sequence is: power on → insmod → unbind → reset →
 - Removed entire `touch-en-regulator` node (was: regulator-fixed, GPIO 10)
 
 **Boot image:** `boot-mobian-noavdd2.img` flashed to `boot_a`
+
+**Known issue:** Touch I2C communication breaks during the greeter→user session
+transition (greetd restarts phoc). The touch IC needs a reset+rebind after
+unlocking. Currently requires manual SSH intervention; automating this via a
+session-start hook or udev rule is TODO.
 
 **What does NOT work (tested and failed):**
 - Loading s6sy761.ko with stock DTB — regulator toggle kills simpledrm display
