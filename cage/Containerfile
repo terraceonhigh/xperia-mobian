@@ -1,0 +1,28 @@
+# =============================================================================
+# Claude Code Cage — Container Image
+# Base: Fedora 43 (matches Bazzite host for Python ABI compatibility)
+#
+# Purpose: run pmbootstrap and file-inspection commands in an isolated
+# environment. The real pmaports/workdir are bind-mounted at runtime;
+# this image provides only the runtime environment.
+# =============================================================================
+FROM fedora:43
+
+RUN dnf install -y --setopt=install_weak_deps=False \
+        python3 \
+        git \
+        openssl \
+        bzip2 xz gzip \
+        findutils coreutils util-linux \
+        gawk grep sed \
+        diffutils file \
+        procps-ng \
+        kpartx \
+        sudo \
+        shadow-utils \
+    && dnf clean all
+
+# No additional users — rootless Podman with --userns=keep-id maps the
+# invoking UID into the container as root, preserving file ownership.
+
+WORKDIR /home/terrace

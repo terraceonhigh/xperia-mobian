@@ -1,4 +1,34 @@
+# Large binaries
+*.zip
 *.img
+*.bin
+*.fw
+*.mbn
+*.mdt
+*.b[0-9]*
+*.raw
 *.tar.xz
 *.apk
+*.000
+*.001
+
+# Submodules / separate repos
+mobian/
+pmaports/
+sm6350-kernel/
+
+# Python
+.venv/
+__pycache__/
+
+# OS
+.DS_Store
+
+# Claude
+.claude/
+
+# Large image downloads
+images/
+
+# Infrastructure docs (local only)
 INFRA.md

@@ -1,0 +1,1317 @@
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x51df805e]
+[    0.000000] Linux version 6.12-sm6350 (root@runner-55jbsgyz5-project-88694-concurrent-0) (gcc (Debian 15.2.0-12) 15.2.0, GNU ld (GNU Binutils for Debian) 2.45.50.20260119) #6.12.68-1 SMP Fri Jan 30 11:49:45 UTC 2026
+[    0.000000] KASLR enabled
+[    0.000000] random: crng init done
+[    0.000000] Machine model: Sony Xperia 10 III
+[    0.000000] efi: UEFI not found.
+[    0.000000] [Firmware Bug]: Kernel image misaligned at boot, please fix your bootloader!
+[    0.000000] OF: reserved mem: 0x0000000080000000..0x00000000805fffff (6144 KiB) nomap non-reusable memory@80000000
+[    0.000000] OF: reserved mem: 0x0000000080700000..0x000000008085ffff (1408 KiB) nomap non-reusable memory@80700000
+[    0.000000] OF: reserved mem: 0x0000000080860000..0x000000008087ffff (128 KiB) nomap non-reusable memory@80860000
+[    0.000000] OF: reserved mem: 0x00000000808ff000..0x00000000808fffff (4 KiB) nomap non-reusable memory@808ff000
+[    0.000000] OF: reserved mem: 0x0000000080900000..0x0000000080afffff (2048 KiB) nomap non-reusable memory@80900000
+[    0.000000] OF: reserved mem: 0x0000000080b00000..0x00000000828fffff (30720 KiB) nomap non-reusable memory@80b00000
+[    0.000000] OF: reserved mem: 0x0000000086000000..0x00000000864fffff (5120 KiB) nomap non-reusable memory@86000000
+[    0.000000] OF: reserved mem: 0x0000000086500000..0x00000000869fffff (5120 KiB) nomap non-reusable memory@86500000
+[    0.000000] OF: reserved mem: 0x0000000086a00000..0x0000000086efffff (5120 KiB) nomap non-reusable memory@86a00000
+[    0.000000] OF: reserved mem: 0x0000000086f00000..0x0000000088cfffff (30720 KiB) nomap non-reusable memory@86f00000
+[    0.000000] OF: reserved mem: 0x0000000088d00000..0x000000008b4fffff (40960 KiB) nomap non-reusable memory@88d00000
+[    0.000000] OF: reserved mem: 0x000000008b500000..0x000000008b6fffff (2048 KiB) nomap non-reusable memory@8b500000
+[    0.000000] OF: reserved mem: 0x000000008b700000..0x000000008b70ffff (64 KiB) nomap non-reusable memory@8b700000
+[    0.000000] OF: reserved mem: 0x000000008b710000..0x000000008b7153ff (21 KiB) nomap non-reusable memory@8b710000
+[    0.000000] OF: reserved mem: 0x000000008b800000..0x000000009affffff (253952 KiB) nomap non-reusable memory@8b800000
+[    0.000000] OF: reserved mem: 0x00000000a0000000..0x00000000a22fffff (35840 KiB) nomap non-reusable memory@a0000000
+[    0.000000] OF: reserved mem: 0x00000000a2300000..0x00000000a23fffff (1024 KiB) nomap non-reusable memory@a2300000
+[    0.000000] OF: reserved mem: 0x00000000c0000000..0x00000000c38fffff (58368 KiB) nomap non-reusable memory@c0000000
+[    0.000000] OF: reserved mem: 0x00000000f0d00000..0x00000000f0d00fff (4 KiB) nomap non-reusable memory@f0d00000
+[    0.000000] OF: reserved mem: 0x00000000ffb00000..0x00000000ffbbffff (768 KiB) nomap non-reusable memory@ffb00000
+[    0.000000] OF: reserved mem: 0x00000000ffbc0000..0x00000000ffbfffff (256 KiB) nomap non-reusable memory@ffbc0000
+[    0.000000] OF: reserved mem: 0x00000000ffc00000..0x00000000ffcfffff (1024 KiB) nomap non-reusable ramoops@ffc00000
+[    0.000000] OF: reserved mem: 0x00000000ffd00000..0x00000000ffd00fff (4 KiB) nomap non-reusable memory@ffd00000
+[    0.000000] OF: reserved mem: 0x000000009b000000..0x000000009b1fffff (2048 KiB) nomap non-reusable rmtfs@9b000000
+[    0.000000] NUMA: Faking a node at [mem 0x0000000080000000-0x00000001ffffffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x1ff49f180-0x1ff4a17bf]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000080000000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x00000001ffffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000080000000-0x00000000805fffff]
+[    0.000000]   node   0: [mem 0x0000000080600000-0x00000000806fffff]
+[    0.000000]   node   0: [mem 0x0000000080700000-0x000000008087ffff]
+[    0.000000]   node   0: [mem 0x0000000080880000-0x00000000808fefff]
+[    0.000000]   node   0: [mem 0x00000000808ff000-0x00000000828fffff]
+[    0.000000]   node   0: [mem 0x0000000082900000-0x0000000085ffffff]
+[    0.000000]   node   0: [mem 0x0000000086000000-0x000000008b714fff]
+[    0.000000]   node   0: [mem 0x000000008b716000-0x000000008b7fffff]
+[    0.000000]   node   0: [mem 0x000000008b800000-0x000000009b1fffff]
+[    0.000000]   node   0: [mem 0x000000009b200000-0x000000009fffffff]
+[    0.000000]   node   0: [mem 0x00000000a0000000-0x00000000a23fffff]
+[    0.000000]   node   0: [mem 0x00000000a2400000-0x00000000bcbfffff]
+[    0.000000]   node   0: [mem 0x00000000c0000000-0x00000000c38fffff]
+[    0.000000]   node   0: [mem 0x00000000c3900000-0x00000000f0cfffff]
+[    0.000000]   node   0: [mem 0x00000000f0d00000-0x00000000f0d00fff]
+[    0.000000]   node   0: [mem 0x00000000f0d01000-0x00000000ffafffff]
+[    0.000000]   node   0: [mem 0x00000000ffb00000-0x00000000ffd00fff]
+[    0.000000]   node   0: [mem 0x00000000ffd01000-0x00000001ffffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000080000000-0x00000001ffffffff]
+[    0.000000] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 13312 pages in unavailable ranges
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.1 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] psci: OSI mode supported.
+[    0.000000] psci: [Firmware Bug]: failed to set PC mode: -3
+[    0.000000] percpu: Embedded 21 pages/cpu s46168 r8192 d31656 u86016
+[    0.000000] pcpu-alloc: s46168 r8192 d31656 u86016 alloc=21*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 [0] 4 [0] 5 [0] 6 [0] 7 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] CPU features: detected: GIC system register CPU interface
+[    0.000000] CPU features: kernel page table isolation forced ON by KASLR
+[    0.000000] CPU features: detected: Kernel page table isolation (KPTI)
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: mobile.root=UUID=a1132a8f-e803-4518-9869-49f5a7d2c173 mobile.qcomsoc=qcom/sm6350 mobile.vendor=sony mobile.model=xperia-lena-pdx213 init=/sbin/init ro quiet splash androidboot.verifiedbootstate=orange androidboot.keymaster=1  androidboot.bootdevice=1d84000.ufshc androidboot.fstab_suffix=default androidboot.boot_devices=soc/1d84000.ufshc androidboot.baseband=msm msm_drm.dsi_display0=qcom,mdss_dsi_pdx213_amoled_fhd_cmd: androidboot.dtb_idx=-1347440721 pcb_board_id=A  androidboot.bootloader=xboot oemandroidboot.xboot=1322-1665_X_Boot_SM6350_LA2.0.2_T_205 androidboot.serialno=HQ616S35A9 startup=0x00008004 warmboot=0x77665501 oemandroidboot.babe09a9=00 oemandroidboot.babe137e=7f oemandroidboot.babe087b=63393939393939 oemandroidboot.imei=35428779286086 oemandroidboot.securityflags=0x00000003
+[    0.000000] Unknown kernel command line parameters "splash pcb_board_id=A startup=0x00008004 warmboot=0x77665501", will be passed to user space.
+[    0.000000] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1559551
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] software IO TLB: area num 8.
+[    0.000000] software IO TLB: mapped [mem 0x00000000fbb00000-0x00000000ffb00000] (64MB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=512 to nr_cpu_ids=8.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=8
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GICv3: 928 SPIs implemented
+[    0.000000] GICv3: 0 Extended SPIs implemented
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GICv3: GICv3 features: 16 PPIs
+[    0.000000] GICv3: GICD_CTRL.DS=0, SCR_EL3.FIQ=1
+[    0.000000] GICv3: CPU0: found redistributor 0 region 0:0x0000000017a60000
+[    0.000000] ITS: No ITS available, not enabling LPIs
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] arch_timer: cp15 and mmio timer(s) running at 19.20MHz (virt/virt).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.000001] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.000207] Console: colour dummy device 80x25
+[    0.000218] printk: legacy console [tty0] enabled
+[    0.000343] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    0.000356] pid_max: default: 32768 minimum: 301
+[    0.000482] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.000504] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.002328] rcu: Hierarchical SRCU implementation.
+[    0.002336] rcu: 	Max phase no-delay instances is 1000.
+[    0.002482] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.002752] EFI services will not be available.
+[    0.002985] smp: Bringing up secondary CPUs ...
+[    0.004253] Detected VIPT I-cache on CPU1
+[    0.004335] GICv3: CPU1: found redistributor 100 region 0:0x0000000017a80000
+[    0.004398] CPU1: Booted secondary processor 0x0000000100 [0x51df805e]
+[    0.005639] Detected VIPT I-cache on CPU2
+[    0.005696] GICv3: CPU2: found redistributor 200 region 0:0x0000000017aa0000
+[    0.005741] CPU2: Booted secondary processor 0x0000000200 [0x51df805e]
+[    0.007039] Detected VIPT I-cache on CPU3
+[    0.007093] GICv3: CPU3: found redistributor 300 region 0:0x0000000017ac0000
+[    0.007133] CPU3: Booted secondary processor 0x0000000300 [0x51df805e]
+[    0.008527] Detected VIPT I-cache on CPU4
+[    0.008586] GICv3: CPU4: found redistributor 400 region 0:0x0000000017ae0000
+[    0.008625] CPU4: Booted secondary processor 0x0000000400 [0x51df805e]
+[    0.010122] Detected VIPT I-cache on CPU5
+[    0.010181] GICv3: CPU5: found redistributor 500 region 0:0x0000000017b00000
+[    0.010222] CPU5: Booted secondary processor 0x0000000500 [0x51df805e]
+[    0.012850] CPU features: detected: Spectre-v4
+[    0.012868] CPU features: detected: Spectre-BHB
+[    0.012876] CPU features: detected: ARM erratum 1508412 (kernel portion)
+[    0.012886] CPU features: detected: SSBS not fully self-synchronizing
+[    0.012892] Detected PIPT I-cache on CPU6
+[    0.013041] GICv3: CPU6: found redistributor 600 region 0:0x0000000017b20000
+[    0.013102] CPU6: Booted secondary processor 0x0000000600 [0x411fd0d0]
+[    0.015259] Detected PIPT I-cache on CPU7
+[    0.015425] GICv3: CPU7: found redistributor 700 region 0:0x0000000017b40000
+[    0.015494] CPU7: Booted secondary processor 0x0000000700 [0x411fd0d0]
+[    0.015722] smp: Brought up 1 node, 8 CPUs
+[    0.015742] SMP: Total of 8 processors activated.
+[    0.015746] CPU: All CPU(s) started at EL1
+[    0.015751] CPU features: detected: 32-bit EL0 Support
+[    0.015756] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    0.015760] CPU features: detected: Common not Private translations
+[    0.015764] CPU features: detected: CRC32 instructions
+[    0.015771] CPU features: detected: RCpc load-acquire (LDAPR)
+[    0.015774] CPU features: detected: LSE atomic instructions
+[    0.015778] CPU features: detected: Privileged Access Never
+[    0.015781] CPU features: detected: RAS Extension Support
+[    0.015786] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    0.015872] alternatives: applying system-wide alternatives
+[    0.019276] CPU features: detected: Hardware dirty bit management on CPU6-7
+[    0.019616] Memory: 5524732K/6238204K available (10048K kernel code, 1210K rwdata, 3724K rodata, 1344K init, 563K bss, 707732K reserved, 0K cma-reserved)
+[    0.021490] devtmpfs: initialized
+[    0.028450] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.028469] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.028603] 2G module region forced by RANDOMIZE_MODULE_REGION_FULL
+[    0.028608] 0 pages in range for non-PLT usage
+[    0.028612] 520016 pages in range for PLT usage
+[    0.028672] pinctrl core: initialized pinctrl subsystem
+[    0.029176] DMI not present or invalid.
+[    0.029572] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.030106] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.030202] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.030293] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.030563] thermal_sys: Registered thermal governor 'step_wise'
+[    0.030569] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.030632] cpuidle: using governor menu
+[    0.030696] NET: Registered PF_QIPCRTR protocol family
+[    0.030850] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.031013] ASID allocator initialised with 32768 entries
+[    0.031144] Serial: AMBA PL011 UART driver
+[    0.033058] CPUidle PSCI: Initialized CPU PM domain topology using OSI mode
+[    0.037528] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    0.037547] /soc@0/phy@1d87000: Fixed dependency cycle(s) with /soc@0/ufs@1d84000
+[    0.037652] /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.037700] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    0.037778] /soc@0/interrupt-controller@17a00000: Fixed dependency cycle(s) with /soc@0/interrupt-controller@17a00000
+[    0.039622] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    0.039718] /soc@0/ufs@1d84000: Fixed dependency cycle(s) with /soc@0/phy@1d87000
+[    0.039762] /soc@0/phy@1d87000: Fixed dependency cycle(s) with /soc@0/ufs@1d84000
+[    0.041449] /soc@0/phy@88e8000: Fixed dependency cycle(s) with /soc@0/usb@a6f8800/usb@a600000
+[    0.042272] /soc@0/usb@a6f8800/usb@a600000: Fixed dependency cycle(s) with /soc@0/phy@88e8000
+[    0.048776] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.048793] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.048804] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.048811] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.048819] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.048826] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.048833] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.048839] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.050773] iommu: Default domain type: Translated
+[    0.050783] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.051396] SCSI subsystem initialized
+[    0.051515] usbcore: registered new interface driver usbfs
+[    0.051573] usbcore: registered new interface driver hub
+[    0.051608] usbcore: registered new device driver usb
+[    0.051753] pps_core: LinuxPPS API ver. 1 registered
+[    0.051759] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.051773] PTP clock support registered
+[    0.051882] scmi_core: SCMI protocol bus registered
+[    0.051995] qcom_scm: convention: smc arm 64
+[    0.053112] Advanced Linux Sound Architecture Driver Initialized.
+[    0.054192] clocksource: Switched to clocksource arch_sys_counter
+[    0.054475] VFS: Disk quotas dquot_6.6.0
+[    0.054495] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.060810] NET: Registered PF_INET protocol family
+[    0.061190] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.071419] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.071476] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.071496] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.071855] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.072913] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.073017] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.073129] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    0.073336] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.073602] Unpacking initramfs...
+[    0.079517] Initialise system trusted keyrings
+[    0.079678] workingset: timestamp_bits=42 max_order=21 bucket_order=0
+[    0.157511] NET: Registered PF_ALG protocol family
+[    0.157529] Key type asymmetric registered
+[    0.157536] Asymmetric key parser 'x509' registered
+[    0.157613] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    0.157622] io scheduler mq-deadline registered
+[    0.157631] io scheduler kyber registered
+[    0.157674] io scheduler bfq registered
+[    0.171754] smps1: Setting 1000000-1200000uV
+[    0.171816] smps8: Setting 313000-1395000uV
+[    0.171992] smps2: Setting 1503000-2048000uV
+[    0.172114] ldo1: Setting 1620000-1980000uV
+[    0.172186] ldo2: Setting 1503000-1980000uV
+[    0.172311] ldo2: Setting 1170000-1305000uV
+[    0.172352] ldo3: Setting 2700000-3300000uV
+[    0.172541] ldo4: Setting 352000-801000uV
+[    0.172548] ldo3: Setting 1100000-1299000uV
+[    0.172780] ldo5: Setting 1503000-1980000uV
+[    0.172786] ldo4: Setting 1620000-3300000uV
+[    0.173021] ldo6: Setting 1710000-3544000uV
+[    0.173027] ldo5: Setting 1620000-3300000uV
+[    0.173256] ldo7: Setting 1620000-1980000uV
+[    0.173266] ldo6: Setting 1700000-2950000uV
+[    0.173505] ldo8: Setting 2500000-3544000uV
+[    0.173511] ldo7: Setting 2700000-3544000uV
+[    0.173768] ldo9: Setting 1650000-3401000uV
+[    0.173774] ldo8: Setting 1620000-2000000uV
+[    0.173953] ldo11: Setting 1800000-2000000uV
+[    0.174053] ldo9: Setting 2700000-2960000uV
+[    0.174144] ldo12: Setting 1620000-1980000uV
+[    0.174297] ldo10: Setting 3000000-3401000uV
+[    0.174363] ldo13: Setting 570000-650000uV
+[    0.174496] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    0.174549] ldo11: Setting 3000000-3401000uV
+[    0.174557] ldo14: Setting 1700000-1900000uV
+[    0.174835] bob: Setting 1620000-5492000uV
+[    0.174843] ldo15: Setting 1100000-1305000uV
+[    0.175072] ldo16: Setting 830000-921000uV
+[    0.175270] ldo18: Setting 788000-1049000uV
+[    0.175458] ldo19: Setting 1080000-1305000uV
+[    0.175648] ldo20: Setting 530000-801000uV
+[    0.175835] ldo21: Setting 751000-825000uV
+[    0.176045] ldo22: Setting 1080000-1305000uV
+[    0.176529] msm_serial: driver initialized
+[    0.180477] arm-smmu 15000000.iommu: probing hardware configuration...
+[    0.180491] arm-smmu 15000000.iommu: SMMUv2 with:
+[    0.180525] arm-smmu 15000000.iommu: 	stage 1 translation
+[    0.180533] arm-smmu 15000000.iommu: 	coherent table walk
+[    0.180542] arm-smmu 15000000.iommu: 	stream matching with 71 register groups
+[    0.180563] arm-smmu 15000000.iommu: 	63 context banks (0 stage-2 only)
+[    0.181194] arm-smmu 15000000.iommu: 	Supported page sizes: 0x61311000
+[    0.181205] arm-smmu 15000000.iommu: 	Stage-1: 36-bit VA -> 36-bit IPA
+[    0.181383] arm-smmu 15000000.iommu: 	preserved 0 boot mappings
+[    0.189719] loop: module loaded
+[    0.190148] spmi_pmic_arb c440000.spmi: PMIC arbiter version v5 (0x50010000)
+[    0.195005] tun: Universal TUN/TAP device driver, 1.6
+[    0.195939] usbcore: registered new interface driver usb-storage
+[    0.196209] [HXTP] himax_hx83112_init
+[    0.196216] [HXTP] himax_hx83112_probe:Enter
+[    0.196223] [HXTP] Himax common touch panel driver init
+[    0.196535] i2c_dev: i2c /dev entries driver
+[    0.197991] input: pm8941_pwrkey as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@800/c440000.spmi:pmic@0:pon@800:pwrkey/input/input0
+[    0.199046] input: pm8941_resin as /devices/platform/soc@0/c440000.spmi/spmi-0/0-00/c440000.spmi:pmic@0:pon@800/c440000.spmi:pmic@0:pon@800:resin/input/input1
+[    0.212921] sdhci: Secure Digital Host Controller Interface driver
+[    0.212936] sdhci: Copyright(c) Pierre Ossman
+[    0.212942] sdhci-pltfm: SDHCI platform and OF driver helper
+[    0.213856] hid: raw HID events driver (C) Jiri Kosina
+[    0.214061] usbcore: registered new interface driver usbhid
+[    0.214068] usbhid: USB HID core driver
+[    0.218566] hw perfevents: enabled with armv8_pmuv3 PMU driver, 7 (0,8000003f) counters available
+[    0.238436] NET: Registered PF_INET6 protocol family
+[    0.239667] Segment Routing with IPv6
+[    0.239704] In-situ OAM (IOAM) with IPv6
+[    0.239774] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    0.240276] NET: Registered PF_PACKET protocol family
+[    0.240298] Key type dns_resolver registered
+[    0.245792] Loading compiled-in X.509 certificates
+[    0.254130] Demotion targets for Node 0: null
+[    0.254630] Key type .fscrypt registered
+[    0.254638] Key type fscrypt-provisioning registered
+[    0.275000] gpi 800000.dma-controller: Adding to iommu group 0
+[    0.275778] gpi 900000.dma-controller: Adding to iommu group 1
+[    0.276580] qcom-qmp-combo-phy 88e8000.phy: supply vdda-phy not found, using dummy regulator
+[    0.276679] qcom-qmp-combo-phy 88e8000.phy: supply vdda-pll not found, using dummy regulator
+[    0.276824] aux_bridge.aux_bridge aux_bridge.aux_bridge.0: error -ENODEV: failed to acquire drm_bridge
+[    0.277422] qcom-qmp-ufs-phy 1d87000.phy: supply vdda-phy not found, using dummy regulator
+[    0.277488] qcom-qmp-ufs-phy 1d87000.phy: supply vdda-pll not found, using dummy regulator
+[    0.278034] qcom-qusb2-phy 88e3000.phy: supply vdd not found, using dummy regulator
+[    0.278099] qcom-qusb2-phy 88e3000.phy: supply vdda-pll not found, using dummy regulator
+[    0.278134] qcom-qusb2-phy 88e3000.phy: supply vdda-phy-dpdm not found, using dummy regulator
+[    0.278523] bam-dma-engine 1dc4000.dma-controller: Adding to iommu group 2
+[    0.279393] geni_se_qup 8c0000.geniqup: Adding to iommu group 3
+[    0.279722] geni_se_qup 9c0000.geniqup: Adding to iommu group 4
+[    0.288432] arm-smmu 3d40000.iommu: probing hardware configuration...
+[    0.288448] arm-smmu 3d40000.iommu: SMMUv2 with:
+[    0.288469] arm-smmu 3d40000.iommu: 	stage 1 translation
+[    0.288474] arm-smmu 3d40000.iommu: 	address translation ops
+[    0.288478] arm-smmu 3d40000.iommu: 	non-coherent table walk
+[    0.288483] arm-smmu 3d40000.iommu: 	(IDR0.CTTW overridden by FW configuration)
+[    0.288488] arm-smmu 3d40000.iommu: 	stream matching with 5 register groups
+[    0.288504] arm-smmu 3d40000.iommu: 	5 context banks (0 stage-2 only)
+[    0.288522] arm-smmu 3d40000.iommu: 	Supported page sizes: 0x61311000
+[    0.288528] arm-smmu 3d40000.iommu: 	Stage-1: 48-bit VA -> 36-bit IPA
+[    0.288700] arm-smmu 3d40000.iommu: 	preserved 0 boot mappings
+[    0.289921] [drm] Initialized simpledrm 1.0.0 for a0000000.framebuffer on minor 0
+[    0.310080] Console: switching to colour frame buffer device 135x157
+[    0.338545] simple-framebuffer a0000000.framebuffer: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.341776] dwc3 a600000.usb: Adding to iommu group 5
+[    0.348276] ufshcd-qcom 1d84000.ufs: Adding to iommu group 6
+[    0.348600] sdhci_msm 8804000.mmc: Adding to iommu group 7
+[    0.348994] sdhci_msm 8804000.mmc: Got CD GPIO
+[    0.349457] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vdd-hba-supply regulator, assuming enabled
+[    0.349475] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vcc-supply regulator, assuming enabled
+[    0.349486] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vccq-supply regulator, assuming enabled
+[    0.349496] ufshcd-qcom 1d84000.ufs: ufshcd_populate_vreg: Unable to find vccq2-supply regulator, assuming enabled
+[    0.350155] ufshcd-qcom 1d84000.ufs: Found QC Inline Crypto Engine (ICE) v3.1.0
+[    0.351363] scsi host0: ufshcd
+[    0.362777] qcrypto 1dfa000.crypto: Adding to iommu group 2
+[    0.366628] aborting qcom_add_pdm_subdev, name 3000000.remoteproc
+[    0.366796] remoteproc remoteproc0: 3000000.remoteproc is available
+[    0.368129] aborting qcom_add_pdm_subdev, name 4080000.remoteproc
+[    0.368310] remoteproc remoteproc1: 4080000.remoteproc is available
+[    0.370926] aborting qcom_add_pdm_subdev, name 8300000.remoteproc
+[    0.371050] remoteproc remoteproc2: 8300000.remoteproc is available
+[    0.373297] cpu cpu0: EM: OPP:1612800 is inefficient
+[    0.373313] cpu cpu0: EM: OPP:576000 is inefficient
+[    0.373657] cpu cpu0: EM: created perf domain
+[    0.379367] cpu cpu6: EM: created perf domain
+[    0.379382] energy_model: updating cpu0 cpu_cap=456 old capacity=553
+[    0.379401] cpu cpu0: EM: OPP:1612800 is inefficient
+[    0.379411] cpu cpu0: EM: OPP:576000 is inefficient
+[    0.382743] mmc0: SDHCI controller on 8804000.mmc [8804000.mmc] using ADMA 64-bit
+[    0.385959] input: gpio-keys as /devices/platform/gpio-keys/input/input2
+[    0.386346] clk: Disabling unused clocks
+[    0.386537] PM: genpd: Disabling unused power domains
+[    0.390393] ALSA device list:
+[    0.390395]   No soundcards found.
+[    0.459075] scsi 0:0:0:49488: Well-known LUN    MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.461561] scsi 0:0:0:49476: Well-known LUN    MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.463299] scsi 0:0:0:49456: Well-known LUN    MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.465221] scsi 0:0:0:0: Direct-Access     MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.466716] sd 0:0:0:0: [sda] 31234048 4096-byte logical blocks: (128 GB/119 GiB)
+[    0.466866] sd 0:0:0:0: [sda] Write Protect is off
+[    0.466869] sd 0:0:0:0: [sda] Mode Sense: 00 32 00 10
+[    0.467104] scsi 0:0:0:1: Direct-Access     MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.467130] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.467176] sd 0:0:0:0: [sda] Preferred minimum I/O size 131072 bytes
+[    0.467177] sd 0:0:0:0: [sda] Optimal transfer size 131072 bytes
+[    0.468737] sd 0:0:0:1: [sdb] 2048 4096-byte logical blocks: (8.39 MB/8.00 MiB)
+[    0.468777] scsi 0:0:0:2: Direct-Access     MICRON   MT128GASAO4U21   0608 PQ: 0 ANSI: 6
+[    0.468946] sd 0:0:0:1: [sdb] Write Protect is off
+[    0.468957] sd 0:0:0:1: [sdb] Mode Sense: 00 32 00 10
+[    0.469142] sd 0:0:0:1: [sdb] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.469224] sd 0:0:0:1: [sdb] Preferred minimum I/O size 131072 bytes
+[    0.469232] sd 0:0:0:1: [sdb] Optimal transfer size 131072 bytes
+[    0.470631] sd 0:0:0:2: [sdc] 2048 4096-byte logical blocks: (8.39 MB/8.00 MiB)
+[    0.470709] sd 0:0:0:2: [sdc] Write Protect is off
+[    0.470716] sd 0:0:0:2: [sdc] Mode Sense: 00 32 00 10
+[    0.470860] sd 0:0:0:2: [sdc] Write cache: enabled, read cache: enabled, supports DPO and FUA
+[    0.470952] sd 0:0:0:2: [sdc] Preferred minimum I/O size 131072 bytes
+[    0.470966] sd 0:0:0:2: [sdc] Optimal transfer size 131072 bytes
+[    0.509488]  sda: sda1 sda2 sda3 sda4 sda5 sda6 sda7 sda8 sda9 sda10 sda11 sda12 sda13 sda14 sda15 sda16 sda17 sda18 sda19 sda20 sda21 sda22 sda23 sda24 sda25 sda26 sda27 sda28 sda29 sda30 sda31 sda32 sda33 sda34 sda35 sda36 sda37 sda38 sda39 sda40 sda41 sda42 sda43 sda44 sda45 sda46 sda47 sda48 sda49 sda50 sda51 sda52 sda53 sda54 sda55 sda56 sda57 sda58 sda59 sda60 sda61 sda62 sda63 sda64 sda65 sda66 sda67 sda68 sda69 sda70 sda71 sda72 sda73 sda74 sda75 sda76 sda77 sda78 sda79 sda80
+[    0.510225]  sdb: sdb1 sdb2
+[    0.511651] sd 0:0:0:1: [sdb] Attached SCSI disk
+[    0.523442]  sdc: sdc1 sdc2
+[    0.523820] sd 0:0:0:2: [sdc] Attached SCSI disk
+[    0.524883] sd 0:0:0:0: [sda] Attached SCSI disk
+[    0.553765] mmc0: new ultra high speed SDR104 SDHC card at address 5048
+[    0.554258] mmcblk0: mmc0:5048 SD32G 29.7 GiB
+[    0.570968] Freeing initrd memory: 18360K
+[    0.571286] remoteproc remoteproc0: Direct firmware load for qcom/sm6350/adsp.mdt failed with error -2
+[    0.571299] remoteproc remoteproc0: powering up 3000000.remoteproc
+[    0.571315] remoteproc remoteproc0: Direct firmware load for qcom/sm6350/adsp.mdt failed with error -2
+[    0.571318] remoteproc remoteproc0: request_firmware failed: -2
+[    0.571341] remoteproc remoteproc2: Direct firmware load for qcom/sm6350/cdsp.mdt failed with error -2
+[    0.571453] remoteproc remoteproc2: powering up 8300000.remoteproc
+[    0.571464] remoteproc remoteproc2: Direct firmware load for qcom/sm6350/cdsp.mdt failed with error -2
+[    0.571466] remoteproc remoteproc2: request_firmware failed: -2
+[    0.571996] Freeing unused kernel memory: 1344K
+[    0.572535] Run /init as init process
+[    0.572545]   with arguments:
+[    0.572553]     /init
+[    0.572560]     splash
+[    0.572567]   with environment:
+[    0.572570]     HOME=/
+[    0.572573]     TERM=linux
+[    0.572576]     pcb_board_id=A
+[    0.572579]     startup=0x00008004
+[    0.572582]     warmboot=0x77665501
+[    2.003292] EXT4-fs (mmcblk0): orphan cleanup on readonly fs
+[    2.004806] EXT4-fs (mmcblk0): mounted filesystem a1132a8f-e803-4518-9869-49f5a7d2c173 ro with ordered data mode. Quota mode: none.
+[    3.473902] systemd[1]: System time advanced to timestamp on /var/lib/systemd/timesync/clock: Sat 2026-02-07 12:38:23 UTC
+[    3.500830] systemd[1]: Failed to find module 'autofs4'
+[    3.870724] systemd[1]: systemd 259.1-1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[    3.870804] systemd[1]: Detected architecture arm64.
+[    3.883813] systemd[1]: Hostname set to <mobian>.
+[    3.975448] systemd[1]: bpf-restrict-fs: BPF LSM hook not enabled in the kernel, BPF LSM not supported.
+[    4.621535] zram_generator::generator[279]: modprobe "zram" failed, ignoring: code exit status: 1
+[    4.622640] (generato[263]: /usr/lib/systemd/system-generators/zram-generator failed with exit status 1.
+[    4.867928] systemd[1]: /etc/systemd/system/usb-debug.service:8: Ignoring unknown escape sequences: "echo "=== USB Debug ==" > /var/log/usb-debug.log; ls /sys/class/udc/ >> /var/log/usb-debug.log 2>&1; ls /sys/kernel/config/usb_gadget/ >> /var/log/usb-debug.log 2>&1; dmesg | grep -i "usb\|dwc3\|gadget\|udc" >> /var/log/usb-debug.log 2>&1; ip link >> /var/log/usb-debug.log 2>&1"
+[    5.146270] systemd[1]: Queued start job for default target graphical.target.
+[    5.927202] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[    5.932136] systemd[1]: Created slice system-systemd\x2dzram\x2dsetup.slice - Slice /system/systemd-zram-setup.
+[    5.936037] systemd[1]: Created slice user.slice - User and Session Slice.
+[    5.936492] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[    5.936831] systemd[1]: proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point skipped, unmet condition check ConditionPathExists=/proc/sys/fs/binfmt_misc
+[    5.936962] systemd[1]: Expecting device dev-zram0.device - /dev/zram0...
+[    5.937155] systemd[1]: Reached target imports.target - Image Downloads.
+[    5.937280] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[    5.937492] systemd[1]: Reached target nss-user-lookup.target - User and Group Name Lookups.
+[    5.937621] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[    5.937738] systemd[1]: Reached target slices.target - Slice Units.
+[    5.937997] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[    5.949441] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[    5.955721] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[    5.964797] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[    5.965346] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    5.965779] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[    5.974191] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[    5.974369] systemd[1]: systemd-oomd.socket - Userspace Out-Of-Memory (OOM) Killer Socket skipped, unmet condition check ConditionPathExists=/proc/pressure/memory
+[    5.974516] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[    5.974642] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    5.980277] systemd[1]: Listening on systemd-repart.socket - Disk Repartitioning Service Socket.
+[    5.980726] systemd[1]: Listening on systemd-resolved-monitor.socket - Resolve Monitor Varlink Socket.
+[    5.981084] systemd[1]: Listening on systemd-resolved-varlink.socket - Resolve Service Varlink Socket.
+[    5.981553] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    5.981908] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    5.982405] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[    5.982776] systemd[1]: Listening on systemd-userdbd.socket - User Database Manager Socket.
+[    5.993029] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[    5.993471] systemd[1]: dev-mqueue.mount - POSIX Message Queue File System skipped, unmet condition check ConditionPathExists=/proc/sys/fs/mqueue
+[    5.999843] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[    6.000245] systemd[1]: sys-kernel-tracing.mount - Kernel Trace File System skipped, unmet condition check ConditionPathExists=/sys/kernel/tracing
+[    6.007704] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[    6.039919] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    6.040269] systemd[1]: modprobe@configfs.service - Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[    6.048853] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[    6.048999] systemd[1]: modprobe@drm.service - Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[    6.058612] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[    6.067842] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+[    6.068369] systemd[1]: systemd-fsck-root.service - File System Check on Root Device skipped, unmet condition check ConditionPathExists=!/run/initramfs/fsck-root
+[    6.068512] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[    6.069510] systemd[1]: systemd-journald.service: unit configures an IP firewall, but the local system does not support BPF/cgroup firewalling.
+[    6.069535] systemd[1]: systemd-journald.service: (This warning is only shown for the first unit using IP firewalling.)
+[    6.080331] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    6.092420] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    6.092537] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    6.092697] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    6.097521] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[    6.097752] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[    6.102688] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[    6.109568] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    6.139747] systemd-journald[466]: Collecting audit messages is disabled.
+[    6.168535] EXT4-fs (mmcblk0): re-mounted a1132a8f-e803-4518-9869-49f5a7d2c173 r/w.
+[    6.230523] systemd[1]: Started systemd-journald.service - Journal Service.
+[    6.406467] systemd-journald[466]: Received client request to flush runtime journal.
+[    6.417672] systemd-journald[466]: File /var/log/journal/fdfdc86f43ea4103bf56220246def365/system.journal corrupted or uncleanly shut down, renaming and replacing.
+[    6.785043] EXT4-fs (mmcblk0): resizing filesystem from 7794688 to 7794688 blocks
+[    7.871060] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    7.884851] Loaded X.509 cert 'benh@debian.org: 577e021cb980e0e820821ba7b54b4961b8b4fadf'
+[    7.885047] Loaded X.509 cert 'romain.perier@gmail.com: 3abbc6ec146e09d1b6016ab9d6cf71dd233f0328'
+[    7.885220] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    7.885391] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    8.033162] ath10k_snoc 18800000.wifi: Adding to iommu group 8
+[   96.440515] configfs-gadget.g1 gadget.0: HOST MAC 0a:cf:63:24:e0:66
+[   96.440526] configfs-gadget.g1 gadget.0: MAC de:4a:e2:3d:5b:6d
+[   96.447506] remoteproc remoteproc1: powering up 4080000.remoteproc
+[   96.451188] remoteproc remoteproc1: Booting fw image qcom/sm6350/modem.mdt, size 9268
+[   98.986087] s6sy761 0-0048: supply avdd not found, using dummy regulator
+[   99.049155] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[   99.126814] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[   99.127007] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[   99.127156] remoteproc remoteproc1: handling crash #1 in 4080000.remoteproc
+[   99.127256] remoteproc remoteproc1: recovering 4080000.remoteproc
+[   99.172052] s6sy761 0-0048: the axis have not been set
+[   99.172223] input: s6sy761 as /devices/platform/soc@0/9c0000.geniqup/988000.i2c/i2c-0/0-0048/input/input3
+[   99.185390] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[   99.896390] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[   99.945738] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[   99.946008] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[   99.946282] remoteproc remoteproc1: handling crash #2 in 4080000.remoteproc
+[   99.946428] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  100.022709] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  100.754302] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  100.801848] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  100.802008] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  100.802208] remoteproc remoteproc1: handling crash #3 in 4080000.remoteproc
+[  100.802270] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  100.858120] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  101.563409] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  101.612371] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  101.612514] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  101.612771] remoteproc remoteproc1: handling crash #4 in 4080000.remoteproc
+[  101.612834] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  101.667850] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  102.259497] s6sy761 0-0048: supply avdd not found, using dummy regulator
+[  102.365243] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  102.413224] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  102.413291] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  102.413346] remoteproc remoteproc1: handling crash #5 in 4080000.remoteproc
+[  102.413363] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  102.423760] s6sy761 0-0048: the axis have not been set
+[  102.423960] input: s6sy761 as /devices/platform/soc@0/9c0000.geniqup/988000.i2c/i2c-0/0-0048/input/input4
+[  102.473347] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  103.147336] gpi 900000.dma-controller: Error in Transaction
+[  103.147363] geni_i2c 988000.i2c: DMA txn failed:3
+[  103.147384] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  103.147933] s6sy761 0-0048: failed to turn off sensing
+[  103.192445] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  103.241130] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  103.241174] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  103.241215] remoteproc remoteproc1: handling crash #6 in 4080000.remoteproc
+[  103.241232] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  103.299241] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  103.998791] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  104.047873] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  104.047923] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  104.048758] remoteproc remoteproc1: handling crash #7 in 4080000.remoteproc
+[  104.048772] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  104.092262] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  104.471240] gpi 900000.dma-controller: Error in Transaction
+[  104.471264] geni_i2c 988000.i2c: DMA txn failed:3
+[  104.471283] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  104.813232] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  104.862380] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  104.862426] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  104.862477] remoteproc remoteproc1: handling crash #8 in 4080000.remoteproc
+[  104.862490] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  104.918586] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  105.639478] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  105.687563] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  105.687620] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  105.687658] remoteproc remoteproc1: handling crash #9 in 4080000.remoteproc
+[  105.687672] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  105.746182] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  106.637841] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  106.685892] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  106.685939] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  106.685991] remoteproc remoteproc1: handling crash #10 in 4080000.remoteproc
+[  106.686008] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  106.757056] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  107.569429] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  107.617918] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  107.617962] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  107.617986] remoteproc remoteproc1: handling crash #11 in 4080000.remoteproc
+[  107.618002] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  107.694034] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  108.416190] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  108.463821] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  108.463865] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  108.463890] remoteproc remoteproc1: handling crash #12 in 4080000.remoteproc
+[  108.463897] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  108.520405] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  109.256832] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  109.305257] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  109.305307] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  109.305336] remoteproc remoteproc1: handling crash #13 in 4080000.remoteproc
+[  109.305349] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  109.376346] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  110.126455] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  110.174092] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  110.174137] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  110.174210] remoteproc remoteproc1: handling crash #14 in 4080000.remoteproc
+[  110.174222] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  110.246283] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  111.910899] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  111.958385] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  111.958436] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  111.958469] remoteproc remoteproc1: handling crash #15 in 4080000.remoteproc
+[  111.958476] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  112.015567] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  112.783090] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  112.832209] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  112.832256] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  112.832292] remoteproc remoteproc1: handling crash #16 in 4080000.remoteproc
+[  112.832300] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  112.896348] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  113.699488] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  113.747882] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  113.747962] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  113.748166] remoteproc remoteproc1: handling crash #17 in 4080000.remoteproc
+[  113.748181] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  113.829771] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  114.637099] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  114.685554] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  114.685616] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  114.685807] remoteproc remoteproc1: handling crash #18 in 4080000.remoteproc
+[  114.685822] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  114.765616] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  115.568924] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  115.617489] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  115.617601] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  115.618020] remoteproc remoteproc1: handling crash #19 in 4080000.remoteproc
+[  115.618028] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  115.687043] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  116.447169] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  116.495594] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  116.495647] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  116.495908] remoteproc remoteproc1: handling crash #20 in 4080000.remoteproc
+[  116.495924] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  116.573725] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  117.372891] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  117.422116] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  117.422230] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  117.422423] remoteproc remoteproc1: handling crash #21 in 4080000.remoteproc
+[  117.422439] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  117.492434] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  118.265255] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  118.314526] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  118.314582] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  118.314808] remoteproc remoteproc1: handling crash #22 in 4080000.remoteproc
+[  118.314828] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  118.391841] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  119.251785] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  119.300552] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  119.300613] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  119.300654] remoteproc remoteproc1: handling crash #23 in 4080000.remoteproc
+[  119.300662] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  119.362516] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  120.334055] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  120.383560] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  120.383623] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  120.383822] remoteproc remoteproc1: handling crash #24 in 4080000.remoteproc
+[  120.383841] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  120.464634] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  121.234720] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  121.283664] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  121.283709] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  121.284083] remoteproc remoteproc1: handling crash #25 in 4080000.remoteproc
+[  121.284093] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  121.338448] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  122.124711] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  122.173225] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  122.173298] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  122.173351] remoteproc remoteproc1: handling crash #26 in 4080000.remoteproc
+[  122.173368] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  122.243522] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  123.033301] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  123.082213] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  123.082265] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  123.082708] remoteproc remoteproc1: handling crash #27 in 4080000.remoteproc
+[  123.082728] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  123.155803] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  123.939367] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  123.988177] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  123.988234] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  123.988444] remoteproc remoteproc1: handling crash #28 in 4080000.remoteproc
+[  123.988463] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  124.056881] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  124.855682] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  124.904298] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  124.904386] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  124.904643] remoteproc remoteproc1: handling crash #29 in 4080000.remoteproc
+[  124.904652] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  124.968441] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  125.739055] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  125.788136] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  125.788191] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  125.788384] remoteproc remoteproc1: handling crash #30 in 4080000.remoteproc
+[  125.788399] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  125.861994] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  126.654087] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  126.703016] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  126.703073] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  126.703247] remoteproc remoteproc1: handling crash #31 in 4080000.remoteproc
+[  126.703268] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  126.779547] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  127.610410] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  127.658766] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  127.658817] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  127.658991] remoteproc remoteproc1: handling crash #32 in 4080000.remoteproc
+[  127.659006] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  127.733860] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  128.534258] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  128.583024] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  128.583091] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  128.583317] remoteproc remoteproc1: handling crash #33 in 4080000.remoteproc
+[  128.583335] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  128.652197] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  129.446552] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  129.494612] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  129.494659] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  129.495009] remoteproc remoteproc1: handling crash #34 in 4080000.remoteproc
+[  129.495022] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  129.549255] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  130.350938] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  130.404173] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  130.404233] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  130.404513] remoteproc remoteproc1: handling crash #35 in 4080000.remoteproc
+[  130.404523] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  130.468106] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  131.268170] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  131.317508] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  131.317554] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  131.317619] remoteproc remoteproc1: handling crash #36 in 4080000.remoteproc
+[  131.317633] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  131.391399] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  132.154735] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  132.204462] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  132.204506] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  132.204668] remoteproc remoteproc1: handling crash #37 in 4080000.remoteproc
+[  132.204682] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  132.274685] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  133.059254] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  133.107672] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  133.107719] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  133.108038] remoteproc remoteproc1: handling crash #38 in 4080000.remoteproc
+[  133.108049] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  133.168375] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  133.964986] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  134.016057] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  134.016155] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  134.016486] remoteproc remoteproc1: handling crash #39 in 4080000.remoteproc
+[  134.016498] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  134.070332] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  134.883234] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  134.936894] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  134.936938] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  134.937127] remoteproc remoteproc1: handling crash #40 in 4080000.remoteproc
+[  134.937138] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  135.008898] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  135.781532] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  135.831273] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  135.831333] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  135.831568] remoteproc remoteproc1: handling crash #41 in 4080000.remoteproc
+[  135.831584] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  135.911191] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  136.707555] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  136.757866] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  136.757936] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  136.758140] remoteproc remoteproc1: handling crash #42 in 4080000.remoteproc
+[  136.758155] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  136.827414] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  137.630628] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  137.681110] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  137.681162] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  137.681401] remoteproc remoteproc1: handling crash #43 in 4080000.remoteproc
+[  137.681426] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  137.743088] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  138.451849] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  138.502436] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  138.502485] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  138.503308] remoteproc remoteproc1: handling crash #44 in 4080000.remoteproc
+[  138.503324] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  138.563620] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  139.277660] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  139.327573] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  139.327623] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  139.327845] remoteproc remoteproc1: handling crash #45 in 4080000.remoteproc
+[  139.327870] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  139.398789] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  140.162650] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  140.212935] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  140.212985] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  140.213873] remoteproc remoteproc1: handling crash #46 in 4080000.remoteproc
+[  140.213905] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  140.259193] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  140.978961] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  141.029326] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  141.029375] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  141.029607] remoteproc remoteproc1: handling crash #47 in 4080000.remoteproc
+[  141.029623] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  141.072198] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  141.803579] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  141.852390] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  141.852434] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  141.852481] remoteproc remoteproc1: handling crash #48 in 4080000.remoteproc
+[  141.852498] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  141.930809] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  142.675252] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  142.725827] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  142.725867] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  142.726795] remoteproc remoteproc1: handling crash #49 in 4080000.remoteproc
+[  142.726803] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  142.781416] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  143.496153] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  143.548978] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  143.549020] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  143.549845] remoteproc remoteproc1: handling crash #50 in 4080000.remoteproc
+[  143.549857] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  143.593125] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  144.319398] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  144.369890] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  144.369945] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  144.370860] remoteproc remoteproc1: handling crash #51 in 4080000.remoteproc
+[  144.370891] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  144.413238] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  145.116619] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  145.166262] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  145.166311] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  145.167202] remoteproc remoteproc1: handling crash #52 in 4080000.remoteproc
+[  145.167233] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  145.210611] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  146.109194] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  146.159097] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  146.159147] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  146.159577] remoteproc remoteproc1: handling crash #53 in 4080000.remoteproc
+[  146.159608] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  146.203109] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  146.910084] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  146.961866] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  146.961915] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  146.962721] remoteproc remoteproc1: handling crash #54 in 4080000.remoteproc
+[  146.962734] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  147.006181] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  147.725746] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  147.778292] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  147.778374] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  147.778470] remoteproc remoteproc1: handling crash #55 in 4080000.remoteproc
+[  147.778478] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  147.842231] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  148.569448] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  148.621699] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  148.621749] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  148.621813] remoteproc remoteproc1: handling crash #56 in 4080000.remoteproc
+[  148.621839] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  148.688836] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  149.424195] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  149.477961] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  149.478047] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  149.478156] remoteproc remoteproc1: handling crash #57 in 4080000.remoteproc
+[  149.478192] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  149.533174] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  150.251028] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  150.299638] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  150.299687] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  150.299890] remoteproc remoteproc1: handling crash #58 in 4080000.remoteproc
+[  150.299909] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  150.354229] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  151.082274] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  151.130606] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  151.130655] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  151.131476] remoteproc remoteproc1: handling crash #59 in 4080000.remoteproc
+[  151.131488] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  151.176417] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  151.948510] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  151.999183] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  151.999233] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  151.999430] remoteproc remoteproc1: handling crash #60 in 4080000.remoteproc
+[  151.999450] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  152.069424] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  152.803535] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  152.854930] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  152.855017] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  152.855134] remoteproc remoteproc1: handling crash #61 in 4080000.remoteproc
+[  152.855175] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  152.921960] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  153.659851] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  153.710110] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  153.710230] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  153.711110] remoteproc remoteproc1: handling crash #62 in 4080000.remoteproc
+[  153.711122] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  153.755339] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  154.470034] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  154.519983] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  154.520033] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  154.520237] remoteproc remoteproc1: handling crash #63 in 4080000.remoteproc
+[  154.520262] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  154.591628] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  155.300288] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  155.348072] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  155.348113] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  155.348149] remoteproc remoteproc1: handling crash #64 in 4080000.remoteproc
+[  155.348157] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  155.409665] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  156.135124] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  156.184006] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  156.184092] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  156.184435] remoteproc remoteproc1: handling crash #65 in 4080000.remoteproc
+[  156.184448] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  156.283704] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  156.408433] systemd-journald[466]: File /var/log/journal/fdfdc86f43ea4103bf56220246def365/user-1000.journal corrupted or uncleanly shut down, renaming and replacing.
+[  157.026214] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  157.074714] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  157.074761] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  157.074926] remoteproc remoteproc1: handling crash #66 in 4080000.remoteproc
+[  157.074945] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  157.131058] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  157.878999] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  157.927546] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  157.927595] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  157.927798] remoteproc remoteproc1: handling crash #67 in 4080000.remoteproc
+[  157.927824] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  157.985816] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  158.717130] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  158.746230] gpi 900000.dma-controller: Error in Transaction
+[  158.746259] geni_i2c 988000.i2c: DMA txn failed:3
+[  158.746449] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  158.767705] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  158.767750] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  158.768549] remoteproc remoteproc1: handling crash #68 in 4080000.remoteproc
+[  158.768563] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  158.811233] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  159.535140] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  159.585315] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  159.585364] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  159.586221] remoteproc remoteproc1: handling crash #69 in 4080000.remoteproc
+[  159.586231] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  159.633208] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  160.374803] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  160.425713] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  160.425762] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  160.426682] remoteproc remoteproc1: handling crash #70 in 4080000.remoteproc
+[  160.426713] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  160.496226] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  161.278043] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  161.330979] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  161.331066] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  161.331263] remoteproc remoteproc1: handling crash #71 in 4080000.remoteproc
+[  161.331319] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  161.388628] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  161.953470] s6sy761 0-0048: supply avdd not found, using dummy regulator
+[  162.115240] s6sy761 0-0048: the axis have not been set
+[  162.115741] input: s6sy761 as /devices/platform/soc@0/9c0000.geniqup/988000.i2c/i2c-0/0-0048/input/input5
+[  162.192756] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  162.244612] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  162.244699] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  162.244904] remoteproc remoteproc1: handling crash #72 in 4080000.remoteproc
+[  162.244918] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  162.305255] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  163.015624] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  163.068060] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  163.068102] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  163.068140] remoteproc remoteproc1: handling crash #73 in 4080000.remoteproc
+[  163.068155] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  163.125645] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  164.494077] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  164.545849] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  164.545898] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  164.546744] remoteproc remoteproc1: handling crash #74 in 4080000.remoteproc
+[  164.546757] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  164.589296] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  165.321933] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  165.373093] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  165.373133] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  165.373413] remoteproc remoteproc1: handling crash #75 in 4080000.remoteproc
+[  165.373423] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  165.419825] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  166.137931] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  166.188377] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  166.188419] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  166.188642] remoteproc remoteproc1: handling crash #76 in 4080000.remoteproc
+[  166.188660] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  166.248313] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  166.979873] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  167.029353] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  167.029403] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  167.029459] remoteproc remoteproc1: handling crash #77 in 4080000.remoteproc
+[  167.029475] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  167.089592] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  167.823181] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  167.872218] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  167.872270] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  167.873165] remoteproc remoteproc1: handling crash #78 in 4080000.remoteproc
+[  167.873199] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  167.916577] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  168.650033] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  168.698990] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  168.699038] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  168.699095] remoteproc remoteproc1: handling crash #79 in 4080000.remoteproc
+[  168.699111] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  168.761807] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  169.492763] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  169.541455] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  169.541500] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  169.541683] remoteproc remoteproc1: handling crash #80 in 4080000.remoteproc
+[  169.541699] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  169.614340] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  170.364058] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  170.413852] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  170.413937] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  170.414774] remoteproc remoteproc1: handling crash #81 in 4080000.remoteproc
+[  170.414786] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  170.459972] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  171.180621] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  171.230954] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  171.231037] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  171.231372] remoteproc remoteproc1: handling crash #82 in 4080000.remoteproc
+[  171.231386] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  171.287895] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  172.023416] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  172.072947] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  172.072996] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  172.073205] remoteproc remoteproc1: handling crash #83 in 4080000.remoteproc
+[  172.073230] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  172.129309] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  172.864913] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  172.913844] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  172.913932] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  172.914063] remoteproc remoteproc1: handling crash #84 in 4080000.remoteproc
+[  172.914102] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  172.973551] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  173.705682] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  173.756623] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  173.756674] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  173.757489] remoteproc remoteproc1: handling crash #85 in 4080000.remoteproc
+[  173.757503] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  173.800239] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  174.519658] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  174.569885] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  174.569935] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  174.571040] remoteproc remoteproc1: handling crash #86 in 4080000.remoteproc
+[  174.571049] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  174.614557] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  175.345351] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  175.395252] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  175.395295] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  175.395620] remoteproc remoteproc1: handling crash #87 in 4080000.remoteproc
+[  175.395629] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  175.452269] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  176.239064] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  176.288711] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  176.288799] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  176.289776] remoteproc remoteproc1: handling crash #88 in 4080000.remoteproc
+[  176.289808] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  176.334726] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  177.038253] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  177.089149] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  177.089234] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  177.089569] remoteproc remoteproc1: handling crash #89 in 4080000.remoteproc
+[  177.089583] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  177.146606] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  177.877640] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  177.928749] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  177.928836] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  177.929645] remoteproc remoteproc1: handling crash #90 in 4080000.remoteproc
+[  177.929656] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  177.972451] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  178.827269] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  178.877892] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  178.877940] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  178.878137] remoteproc remoteproc1: handling crash #91 in 4080000.remoteproc
+[  178.878150] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  178.934400] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  179.647183] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  179.699090] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  179.699181] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  179.699268] remoteproc remoteproc1: handling crash #92 in 4080000.remoteproc
+[  179.699279] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  179.753771] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  180.472178] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  180.521458] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  180.521507] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  180.522306] remoteproc remoteproc1: handling crash #93 in 4080000.remoteproc
+[  180.522319] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  180.565647] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  181.278349] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  181.328338] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  181.328423] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  181.328784] remoteproc remoteproc1: handling crash #94 in 4080000.remoteproc
+[  181.328798] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  181.400315] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  182.178131] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  182.228988] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  182.229038] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  182.229260] remoteproc remoteproc1: handling crash #95 in 4080000.remoteproc
+[  182.229285] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  182.295147] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  183.014751] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  183.066056] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  183.066107] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  183.066235] remoteproc remoteproc1: handling crash #96 in 4080000.remoteproc
+[  183.066253] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  183.121510] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  183.851438] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  183.900876] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  183.900922] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  183.900973] remoteproc remoteproc1: handling crash #97 in 4080000.remoteproc
+[  183.900985] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  183.956393] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  184.707702] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  184.757692] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  184.757745] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  184.758278] remoteproc remoteproc1: handling crash #98 in 4080000.remoteproc
+[  184.758294] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  184.809497] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  185.518329] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  185.569729] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  185.569777] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  185.570574] remoteproc remoteproc1: handling crash #99 in 4080000.remoteproc
+[  185.570586] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  185.614183] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  186.335168] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  186.383893] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  186.383937] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  186.383987] remoteproc remoteproc1: handling crash #100 in 4080000.remoteproc
+[  186.383996] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  186.448246] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  187.198999] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  187.247695] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  187.247752] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  187.248019] remoteproc remoteproc1: handling crash #101 in 4080000.remoteproc
+[  187.248046] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  187.320041] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  188.061726] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  188.112846] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  188.112933] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  188.113888] remoteproc remoteproc1: handling crash #102 in 4080000.remoteproc
+[  188.113900] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  188.158336] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  188.893457] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  188.942499] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  188.942549] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  188.942769] remoteproc remoteproc1: handling crash #103 in 4080000.remoteproc
+[  188.942791] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  189.002748] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  189.738805] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  189.788194] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  189.788280] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  189.788625] remoteproc remoteproc1: handling crash #104 in 4080000.remoteproc
+[  189.788639] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  189.848714] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  190.551560] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  190.601075] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  190.601124] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  190.601921] remoteproc remoteproc1: handling crash #105 in 4080000.remoteproc
+[  190.601935] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  190.644840] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  191.349748] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  191.399973] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  191.400023] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  191.400863] remoteproc remoteproc1: handling crash #106 in 4080000.remoteproc
+[  191.400876] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  191.443815] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  192.145403] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  192.196493] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  192.196537] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  192.196718] remoteproc remoteproc1: handling crash #107 in 4080000.remoteproc
+[  192.196738] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  192.255441] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  192.974324] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  193.023762] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  193.023811] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  193.024024] remoteproc remoteproc1: handling crash #108 in 4080000.remoteproc
+[  193.024048] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  193.078586] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  193.807341] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  193.858162] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  193.858234] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  193.859067] remoteproc remoteproc1: handling crash #109 in 4080000.remoteproc
+[  193.859078] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  193.901478] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  194.616806] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  194.669674] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  194.669726] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  194.669796] remoteproc remoteproc1: handling crash #110 in 4080000.remoteproc
+[  194.669812] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  194.738138] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  195.535430] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  195.585467] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  195.585517] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  195.585577] remoteproc remoteproc1: handling crash #111 in 4080000.remoteproc
+[  195.585593] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  195.643931] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  196.944697] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  196.995421] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  196.995511] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  196.996440] remoteproc remoteproc1: handling crash #112 in 4080000.remoteproc
+[  196.996471] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  197.039984] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  197.769248] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  197.818440] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  197.818499] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  197.818805] remoteproc remoteproc1: handling crash #113 in 4080000.remoteproc
+[  197.818814] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  197.863812] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  198.587731] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  198.637447] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  198.637495] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  198.637710] remoteproc remoteproc1: handling crash #114 in 4080000.remoteproc
+[  198.637734] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  198.702682] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  199.426549] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  199.477143] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  199.477232] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  199.477613] remoteproc remoteproc1: handling crash #115 in 4080000.remoteproc
+[  199.477676] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  199.539397] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  200.270375] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  200.320418] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  200.320467] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  200.321299] remoteproc remoteproc1: handling crash #116 in 4080000.remoteproc
+[  200.321311] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  200.368529] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  201.159759] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  201.208171] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  201.208218] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  201.208261] remoteproc remoteproc1: handling crash #117 in 4080000.remoteproc
+[  201.208278] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  201.265092] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  201.969788] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  202.019019] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  202.019059] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  202.020002] remoteproc remoteproc1: handling crash #118 in 4080000.remoteproc
+[  202.020027] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  202.062107] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  202.787782] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  202.837118] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  202.837168] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  202.837975] remoteproc remoteproc1: handling crash #119 in 4080000.remoteproc
+[  202.837988] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  202.881220] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  203.601787] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  203.653676] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  203.653761] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  203.654593] remoteproc remoteproc1: handling crash #120 in 4080000.remoteproc
+[  203.654606] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  203.697422] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  204.425743] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  204.476731] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  204.476820] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  204.477764] remoteproc remoteproc1: handling crash #121 in 4080000.remoteproc
+[  204.477795] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  204.520703] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  205.238630] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  205.290199] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  205.290249] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  205.291041] remoteproc remoteproc1: handling crash #122 in 4080000.remoteproc
+[  205.291054] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  205.334453] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  205.555049] gpi 900000.dma-controller: Error in Transaction
+[  205.555135] geni_i2c 988000.i2c: DMA txn failed:3
+[  205.555193] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  205.555616] s6sy761 0-0048: failed to turn off sensing
+[  206.073861] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  206.122108] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  206.122261] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  206.122581] remoteproc remoteproc1: handling crash #123 in 4080000.remoteproc
+[  206.122604] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  206.165371] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  206.887004] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  206.934651] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  206.934795] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  206.934885] remoteproc remoteproc1: handling crash #124 in 4080000.remoteproc
+[  206.934950] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  206.996722] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  207.277067] gpi 900000.dma-controller: Error in Transaction
+[  207.277121] geni_i2c 988000.i2c: DMA txn failed:3
+[  207.277161] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  207.733251] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  207.782520] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  207.782564] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  207.783394] remoteproc remoteproc1: handling crash #125 in 4080000.remoteproc
+[  207.783407] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  207.826505] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  208.569892] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  208.618020] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  208.618062] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  208.618086] remoteproc remoteproc1: handling crash #126 in 4080000.remoteproc
+[  208.618098] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  208.680924] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  208.857785] gpi 900000.dma-controller: Error in Transaction
+[  208.857811] geni_i2c 988000.i2c: DMA txn failed:3
+[  208.857835] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  209.232276] gpi 900000.dma-controller: Error in Transaction
+[  209.232301] geni_i2c 988000.i2c: DMA txn failed:3
+[  209.232314] geni_i2c 988000.i2c: GPI transfer failed: -5
+[  209.639555] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  209.688732] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  209.688775] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  209.688805] remoteproc remoteproc1: handling crash #127 in 4080000.remoteproc
+[  209.688817] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  209.748607] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  210.621876] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  210.670600] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  210.670649] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  210.670799] remoteproc remoteproc1: handling crash #128 in 4080000.remoteproc
+[  210.670814] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  210.729054] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  211.449446] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  211.497225] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  211.497275] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  211.497320] remoteproc remoteproc1: handling crash #129 in 4080000.remoteproc
+[  211.497332] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  211.579714] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  212.014607] rfkill: input handler disabled
+[  212.671814] s6sy761 0-0048: supply avdd not found, using dummy regulator
+[  212.760303] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  212.808092] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  212.808189] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  212.808244] remoteproc remoteproc1: handling crash #130 in 4080000.remoteproc
+[  212.808261] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  212.838323] s6sy761 0-0048: the axis have not been set
+[  212.838475] input: s6sy761 as /devices/platform/soc@0/9c0000.geniqup/988000.i2c/i2c-0/0-0048/input/input6
+[  212.898573] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  213.970082] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  214.018266] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  214.018389] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  214.018480] remoteproc remoteproc1: handling crash #131 in 4080000.remoteproc
+[  214.018502] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  214.134597] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
+[  215.181668] remoteproc remoteproc1: remote processor 4080000.remoteproc is now up
+[  215.229322] qcom_q6v5_pas 4080000.remoteproc: fatal error received: rmts_api.c:1099:get_buffer on RMTS returned failure 1 6
+[  215.229364] remoteproc remoteproc1: crash detected in 4080000.remoteproc: type fatal error
+[  215.229388] remoteproc remoteproc1: handling crash #132 in 4080000.remoteproc
+[  215.229395] remoteproc remoteproc1: recovering 4080000.remoteproc
+[  215.289133] remoteproc remoteproc1: stopped remote processor 4080000.remoteproc
