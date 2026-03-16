@@ -86,7 +86,8 @@ case "$first_cmd" in
     mkdir | touch | \
     cd | true | false | \
     sort | uniq | cut | awk | sed | tr | \
-    tar | unzip | gzip | xz | bzip2 )
+    tar | unzip | gzip | xz | bzip2 | \
+    make | cp | mkbootimg | dtc | lz4 | zstd )
         ;;
     *)
         _log "DENY_ALLOW: first_cmd=$first_cmd"
@@ -114,6 +115,11 @@ _log "ALLOW"
 #   network: default pasta   outbound internet allowed (APK downloads),
 #                            host LAN (192.168.1.x) NOT reachable from inside
 # =============================================================================
+KERNEL_MOUNT=()
+if [[ -d "${WS}/../sm6350-kernel" ]]; then
+    KERNEL_MOUNT=(-v "${WS}/../sm6350-kernel:${WS}/../sm6350-kernel")
+fi
+
 exec podman run --rm \
     --userns=keep-id \
     --security-opt=no-new-privileges \
@@ -124,6 +130,7 @@ exec podman run --rm \
     -v "${WS}/.pmbootstrap:${WS}/.pmbootstrap" \
     -v "${WS}/.venv:${WS}/.venv:ro" \
     -v "${WS}/stock-partitions:${WS}/stock-partitions:ro" \
+    "${KERNEL_MOUNT[@]}" \
     -v "$HOME/.config/pmbootstrap_v3.cfg:$HOME/.config/pmbootstrap_v3.cfg" \
     --env HOME="$HOME" \
     --env PATH="/usr/local/bin:/usr/bin:/bin:${WS}/.venv/bin" \

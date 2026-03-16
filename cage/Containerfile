@@ -12,7 +12,7 @@ RUN dnf install -y --setopt=install_weak_deps=False \
         python3 \
         git \
         openssl \
-        bzip2 xz gzip \
+        bzip2 xz gzip lz4 zstd \
         findutils coreutils util-linux \
         gawk grep sed \
         diffutils file \
@@ -20,7 +20,13 @@ RUN dnf install -y --setopt=install_weak_deps=False \
         kpartx \
         sudo \
         shadow-utils \
+        gcc-aarch64-linux-gnu gcc-c++-aarch64-linux-gnu binutils-aarch64-linux-gnu \
+        make bc flex bison perl \
+        openssl-devel elfutils-libelf-devel \
     && dnf clean all
+
+COPY mkbootimg.py /usr/local/bin/mkbootimg.py
+RUN printf '#!/bin/sh\nexec python3 /usr/local/bin/mkbootimg.py "$@"\n' > /usr/local/bin/mkbootimg && chmod +x /usr/local/bin/mkbootimg
 
 # No additional users — rootless Podman with --userns=keep-id maps the
 # invoking UID into the container as root, preserving file ownership.
