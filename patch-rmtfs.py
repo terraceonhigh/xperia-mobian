@@ -7,8 +7,9 @@ Changes:
 3. Enable UFS controller and UFS PHY (needed for modemst1/modemst2 partitions)
 """
 
-INPUT = "/home/terrace/tmp-dtb/device-wifi-rproc.dts"
-OUTPUT = "/home/terrace/tmp-dtb/device-wifi-rproc-rmtfs.dts"
+import sys
+INPUT = sys.argv[1] if len(sys.argv) > 1 else "/home/terrace/tmp-dtb/device-wifi-rproc.dts"
+OUTPUT = sys.argv[2] if len(sys.argv) > 2 else "/home/terrace/tmp-dtb/device-wifi-rproc-rmtfs.dts"
 
 with open(INPUT) as f:
     lines = f.readlines()

@@ -29,6 +29,7 @@ __pycache__/
 
 # Large image downloads
 images/
+build/
 
 # Infrastructure docs (local only)
 INFRA.md
