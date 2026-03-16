@@ -80,10 +80,7 @@ Sony ABL requirements:
 
 ## Infrastructure
 
-- **Direct SSH (WiFi)**: `ssh mobian@192.168.1.175`
-- **SSH (USB)**: `ssh -J terrace@192.168.1.122 mobian@10.66.0.1`
-- **Fastboot**: `ssh terrace@192.168.1.122 "sudo /var/home/terrace/.local/bin/fastboot ..."`
-- **Build machine**: Bazzite `192.168.1.91`, DTB work at `~/tmp-dtb/`
+See `INFRA.md` (gitignored) for local SSH/build machine details.
 
 ## Recovery
 
