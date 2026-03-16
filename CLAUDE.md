@@ -55,3 +55,23 @@ Follow `COMMITSTYLE.md`. Key rules:
 ## Reference Port
 
 The Fairphone 4 (SM6350) is the closest working reference. Its `device-fairphone-fp4` package shows the expected dependencies for this SoC: hexagonrpcd, pd-mapper, tqftpserv, qbootctl, mesa-vulkan-freedreno, msm-modem, firmware packages, etc.
+
+## Unattended Build Guardrails (--dangerously-skip-permissions)
+
+These rules apply when running with `--dangerously-skip-permissions`:
+
+### Allowed
+- **SSH to Bazzite** (`terrace@192.168.1.91`): container management only (podman build/run/exec/cp/rm)
+- **SSH to phone** (`mobian@<phone-ip>`): `dd` to `boot_a` or `boot_b`, `reboot`, read-only checks (dmesg, sysfs, systemctl status)
+- **This Mac**: read any file, write only to `/Users/terrace/Labs/Xperia/` (project dir) and memory files
+- **scp** between machines for build artifacts (boot images, DTBs)
+
+### Forbidden
+- Do NOT `rm -rf`, `mkfs`, or wipe any partition other than `boot_a`/`boot_b`
+- Do NOT push to any git remote or create PRs/issues without explicit user approval
+- Do NOT modify Bazzite host filesystem outside of `~/Lab/` and podman containers
+- Do NOT install packages on Bazzite host (use containers)
+- Do NOT touch `/etc`, systemd units, or network config on any machine
+- Do NOT run `fastboot` commands (no USB access from Mac)
+- Do NOT delete or overwrite the phone's rootfs partition (`mmcblk0`)
+- Do NOT send messages to external services (Slack, email, GitHub comments)
