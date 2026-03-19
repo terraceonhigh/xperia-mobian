@@ -69,3 +69,18 @@ Boot image `build/boot-mobian-battery.img` with PM7250B DTS additions:
 Medium — charger misconfiguration could theoretically cause battery issues, but the SMB2 driver has hardware safety limits. A kernel module that fails to probe is harmless.
 
 Touch regression needs to be resolved before merging battery DTS into the main boot image.
+
+### Attempt 2 (v3 — stripped thermal nodes, 2026-03-18)
+Removed `bat_therm_sensor` and `pm7250b-thermal` nodes, changed fuel gauge io-channels to use ADC directly instead of thermal sensor phandle. Same result: `gpi 900000.dma-controller: Error in Transaction` at touch probe time. Touch fails with EIO.
+
+**Conclusion:** The GPI DMA regression is caused by the PM7250B PMIC tree itself, not the thermal sensor nodes. The mere presence of `pmic@2` and `pmic@3` under the SPMI bus is enough to break I2C DMA on QUP1 (`988000.i2c`).
+
+**Theory:** The PM7250B PMIC registers many SPMI interrupt children. The SPMI PMIC ARB interrupt controller may be misconfigured for SID 2/3 in the Mobian kernel's DTB (the base DTB only expected SID 0/1). This could cause spurious interrupts or resource conflicts that affect the GPI DMA engine sharing the same interrupt controller hierarchy.
+
+**Next steps:**
+1. Try adding ONLY `pmic@2` with `#address-cells`/`#size-cells` and NO children — see if the bare PMIC registration breaks DMA
+2. If bare PMIC is fine, add children one by one to find which one causes the regression
+3. Check if the SPMI PMIC ARB node needs `qcom,ee` or `qcom,channel` updates for SID 2/3
+4. Compare SPMI ARB configuration between our DTB and the upstream DTB
+
+Full dmesg logs saved: `dmesg-battery-dts.txt` (v1), `dmesg-battery-dts-v2.txt` (v2, with touch disable), `dmesg-battery-dts-v3.txt` (v3, without thermal nodes)

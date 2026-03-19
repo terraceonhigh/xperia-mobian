@@ -214,7 +214,7 @@ PMIC2_NODE = """\
 \t\t\t\tbattery@4800 {
 \t\t\t\t\tcompatible = "qcom,pm7250b-qg", "qcom,pm6150-qg";
 \t\t\t\t\treg = <0x4800>;
-\t\t\t\t\tio-channels = <0xa4 0xa0 0x4b>;
+\t\t\t\t\tio-channels = <0xa0 0x2a 0xa0 0x4b>;
 \t\t\t\t\tio-channel-names = "batt-therm", "batt-id";
 \t\t\t\t\tnvmem = <0xa3>;
 \t\t\t\t\tstatus = "okay";
@@ -328,9 +328,12 @@ while i < len(lines):
         output.append(line)
         i += 1
         output.append(BATTERY_NODE)
-        output.append(BAT_THERM_SENSOR)
+        # NOTE: BAT_THERM_SENSOR omitted — generic-adc-thermal registration
+        # was failing with -19 at boot, possibly cascading into GPI DMA errors.
+        # Fuel gauge can work without batt-therm (loses temperature reading).
+        # output.append(BAT_THERM_SENSOR)
         battery_added = True
-        print("Added battery and bat_therm_sensor nodes at root level")
+        print("Added battery node at root level (bat_therm_sensor omitted)")
         continue
 
     # Add pmic@2 and pmic@3 after pmic@1 closing };
@@ -366,10 +369,11 @@ while i < len(lines):
             if lines[i].strip() == "};":
                 depth -= 1
             i += 1
-        # Insert PM7250B thermal zone after pm6350-thermal
-        output.append(PM7250B_THERMAL)
-        thermal_added = True
-        print("Added pm7250b-thermal zone")
+        # NOTE: PM7250B thermal zone omitted — temp-alarm still registers
+        # via SPMI, just won't have a thermal zone policy until this is fixed.
+        # output.append(PM7250B_THERMAL)
+        thermal_added = True  # skip but count as done
+        print("Skipped pm7250b-thermal zone (investigating DMA regression)")
         continue
 
     output.append(line)
