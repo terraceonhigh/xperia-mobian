@@ -1,7 +1,7 @@
 # Battery & Charging Research — pdx213
 
-**Date**: 2026-03-16
-**Status**: Research complete, implementation requires kernel rebuild
+**Date**: 2026-03-18 (updated from 2026-03-16)
+**Status**: DTS verified working on hardware, kernel module needed next
 
 ## Current State
 
@@ -42,6 +42,30 @@ The Fairphone 4 (also SM6350) uses PM7250B for charging. Its DTS would show the 
 4. Rebuild kernel + boot image
 5. Test: `cat /sys/class/power_supply/*/status`
 
+## DTS Test Results (2026-03-18) — VERIFIED ON HARDWARE
+
+Boot image `build/boot-mobian-battery.img` with PM7250B DTS additions:
+
+**Working:**
+- PM7250B PMIC registered at SPMI SID 2/3 (`/sys/bus/spmi/devices/0-02`, `0-03`)
+- All child devices created: charger@1000, battery@4800, adc@3100, adc-tm@3500, nvram@b100, gpio@c000, temp-alarm@2400
+- ADC reads real hardware values:
+  - Battery voltage: 4.46V (vbat_sns)
+  - USB input: 4.94V @ ~80mA (trickle, no driver)
+  - Charger temp: 32.6°C, die temp: 33.5°C
+- Charger device registered with `compatible = "qcom,pm7250b-charger"`, waiting for driver module
+
+**Broken:**
+- **Touch (s6sy761) probe failed with -5 (EIO)**: I2C read failed. The enable-touch.service also failed. Likely a boot timing issue — the additional PMIC probing may have changed GPIO/I2C initialization order, causing the touch IC to not be powered (GPIO 10) before the kernel tried to auto-probe. Needs investigation.
+- **Battery thermal sensor**: `generic-adc-thermal: Thermal zone sensor register failed: -19` — ADC not ready when thermal zone tried to register. Ordering issue, non-critical.
+
+**Artifacts:**
+- `build/boot-mobian-battery.img` — DTS-only, no charger module
+- `research/dmesg-battery-dts.txt` — full dmesg from this boot
+- `patch-battery.py` — the DTS patch script
+
 ## Risk
 
 Medium — charger misconfiguration could theoretically cause battery issues, but the SMB2 driver has hardware safety limits. A kernel module that fails to probe is harmless.
+
+Touch regression needs to be resolved before merging battery DTS into the main boot image.
