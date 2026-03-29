@@ -78,6 +78,18 @@ Sony ABL requirements:
 - **Touch loads late** (~100s) — `avdd` supply not found, falls back to dummy regulator.
 - **Gzip kernel = bootloop** — Sony ABL rejects gzipped kernels with "devices is corrupt".
 
+## Getting Started
+
+Binary assets (disk images, boot images, build artifacts) are stored in a GitHub Release rather than in the repo. After cloning, run:
+
+```bash
+git clone https://github.com/terraceonhigh/xperia-mobian.git
+cd xperia-mobian
+./restore.sh
+```
+
+This requires the [GitHub CLI](https://cli.github.com/) (`gh`) to be installed and authenticated. It downloads ~50GB of assets from the `blobs-v1` release and places them into `images/` and `build/`.
+
 ## Infrastructure
 
 See `INFRA.md` (gitignored) for local SSH/build machine details.
